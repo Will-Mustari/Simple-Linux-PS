@@ -11,13 +11,15 @@
   -s
    Displays the single-character state information about the process. 
   -U
-   Displays the amount of user time consumed by this process. This information is always displayed by default. -U- turns this option off.
+   Displays the amount of user time consumed by this process. This information is always 
+   displayed by default. -U- turns this option off.
   -S
    Displays the amount of system time consumed so far by this process.
   -v
    Displays the amount of virtual memory currently being used (in pages) by this program.
   -c
-   Displays the command-line that started this program. This information is always displayed by default. -c- turns this option off.
+   Displays the command-line that started this program. This information is always 
+   displayed by default. -c- turns this option off.
 
   options.c: Responsible for parsing the users input. We have a Structure
              in options.h that stores a flag indicating whether an option was
