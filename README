@@ -1,0 +1,36 @@
+
+  Simple program made to mimic the ps command in Linux.
+  
+  ***Use 'make' command to create the simplePS executable***
+  
+  Usage example: 
+  simplePS -p 1234 -s -U -S -v -c
+  
+  -p <pid>
+   Specify a single PID to give info on. If not included, lists info on all processes.
+  -s
+   Displays the single-character state information about the process. 
+  -U
+   Displays the amount of user time consumed by this process. This information is always displayed by default. -U- turns this option off.
+  -S
+   Displays the amount of system time consumed so far by this process.
+  -v
+   Displays the amount of virtual memory currently being used (in pages) by this program.
+  -c
+   Displays the command-line that started this program. This information is always displayed by default. -c- turns this option off.
+
+  options.c: Responsible for parsing the users input. We have a Structure
+             in options.h that stores a flag indicating whether an option was
+             selected. It returns a -1 if it encountered an error.
+
+  list.c:    Responsible for reading the directory and storing a list of
+             of valid pids owned by the user. Returns them as an array of
+             pointers.
+
+  parser.c:  Responsible for reading the individual files and storing the
+             important data within. Stores them into a structure which is
+             then printed before the function is finished. Returns a -1 if
+             an error has been encountered.
+
+  main.c:    Driver class. Calls the three classes in the order listed
+             to make the program work.
